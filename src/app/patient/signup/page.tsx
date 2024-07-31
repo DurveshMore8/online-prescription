@@ -107,7 +107,7 @@ const PatientSignup: FunctionComponent<PatientSignupProps> = () => {
 
       if (res2.code == 200) {
         console.log(res2.data.authToken);
-        router.push("/patient/home");
+        router.push("/patient/doctors");
       } else {
         alert(res2.data.message);
       }

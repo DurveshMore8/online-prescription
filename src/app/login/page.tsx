@@ -46,7 +46,7 @@ const Login: FunctionComponent<LoginProps> = () => {
       if (res.data.type === "doctor") {
         router.push("/doctor/home");
       } else {
-        router.push("/patient/home");
+        router.push("/patient/doctors");
       }
     } else {
       alert(res.data.message);
