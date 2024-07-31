@@ -14,7 +14,7 @@ interface FetchServiceProps {
 export const fetchService = async (
   _props: FetchServiceProps
 ): Promise<ResponseType> => {
-  const authToken = localStorage.getItem("authToken");
+  const authToken = sessionStorage.getItem("authToken");
 
   let response;
 

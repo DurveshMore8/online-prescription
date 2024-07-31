@@ -43,6 +43,7 @@ const Login: FunctionComponent<LoginProps> = () => {
     });
 
     if (res.code == 200) {
+      sessionStorage.setItem("authToken", res.data.authToken);
       if (res.data.type === "doctor") {
         router.push("/doctor/home");
       } else {
