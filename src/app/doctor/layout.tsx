@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Patient Signup",
+  title: "Doctor",
 };
 
-export default function PatientSignupLayout({
+export default function DoctorLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

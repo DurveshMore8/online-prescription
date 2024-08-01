@@ -124,7 +124,7 @@ const DoctorPrescriptionView: FunctionComponent<
             onChange={handleChange}
           />
         </div>
-        <div className="form-buttons">
+        <div className="d-form-buttons">
           <Button onClick={handleUpdateClick} type="button" value="Update" />
           <Button onClick={() => setViewPdf(true)} type="button" value="View" />
         </div>

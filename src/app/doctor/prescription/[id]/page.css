@@ -72,7 +72,7 @@
   font-weight: normal;
 }
 
-.form-buttons {
+.d-form-buttons {
   display: flex;
   gap: 18px;
 }
