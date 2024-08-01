@@ -36,6 +36,7 @@ const DoctorPrescription: FunctionComponent<DoctorPrescriptionProps> = () => {
           return (
             <ConsultationCard
               key={index}
+              id={data._id}
               name={data.patientName}
               email={data.patientEmail}
               phone={data.patientPhone}

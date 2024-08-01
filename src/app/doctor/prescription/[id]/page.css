@@ -1,0 +1,73 @@
+.prescription-view {
+  height: calc(100vh - 80px);
+  padding: 20px;
+  padding: 32px 96px;
+  background-color: #f9f9f9;
+}
+
+.p-doctor-info {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.p-doctor-name {
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+}
+
+.p-email,
+.p-phone {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #555;
+}
+
+.p-email a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.p-email a:hover {
+  text-decoration: underline;
+}
+
+.p-doctor-prescription {
+  margin-top: 36px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-step {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-step-head {
+  margin-bottom: 14px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group-label-value {
+  font-weight: normal;
+}

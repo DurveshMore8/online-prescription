@@ -1,8 +1,10 @@
 import { FunctionComponent, useEffect, useState } from "react";
 import "./style.css";
 import Button from "@/components/button";
+import Link from "next/link";
 
 interface ConsultationCardProps {
+  id?: string;
   name: string;
   email: string;
   phone: string;
@@ -11,6 +13,7 @@ interface ConsultationCardProps {
 }
 
 const ConsultationCard: FunctionComponent<ConsultationCardProps> = ({
+  id = "",
   name,
   email,
   phone,
@@ -46,9 +49,12 @@ const ConsultationCard: FunctionComponent<ConsultationCardProps> = ({
         <p>
           <strong>Illness:</strong> {illness}
         </p>
-        <div className="consultation-button">
+        <Link
+          href={`/doctor/prescription/${id}`}
+          className="consultation-button"
+        >
           {authType == "doctor" && <Button value="View" />}
-        </div>
+        </Link>
       </div>
     </div>
   );
