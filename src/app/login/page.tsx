@@ -44,8 +44,9 @@ const Login: FunctionComponent<LoginProps> = () => {
 
     if (res.code == 200) {
       sessionStorage.setItem("authToken", res.data.authToken);
+      sessionStorage.setItem("authType", res.data.type);
       if (res.data.type === "doctor") {
-        router.push("/doctor/home");
+        router.push("/doctor/prescription");
       } else {
         router.push("/patient/doctors");
       }

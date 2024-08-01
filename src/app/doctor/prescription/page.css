@@ -1,0 +1,9 @@
+.prescription {
+  padding: 32px 96px;
+}
+
+.prescription-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}

@@ -12,12 +12,16 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
 
   const doctorNav = [
     {
-      name: "Home",
-      route: "/doctor/home",
+      name: "Prescription",
+      route: "/doctor/prescription",
     },
     {
-      name: "Home",
-      route: "/doctor/home",
+      name: "Profile",
+      route: "/doctor/profile",
+    },
+    {
+      name: "Logout",
+      route: "/login",
     },
   ];
 

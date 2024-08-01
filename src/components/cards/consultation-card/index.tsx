@@ -1,22 +1,28 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect, useState } from "react";
 import "./style.css";
+import Button from "@/components/button";
 
 interface ConsultationCardProps {
-  doctorName: string;
-  doctorEmail: string;
-  doctorPhone: string;
+  name: string;
+  email: string;
+  phone: string;
   dateBooked: string;
   illness: string;
 }
 
 const ConsultationCard: FunctionComponent<ConsultationCardProps> = ({
-  doctorName,
-  doctorEmail,
-  doctorPhone,
+  name,
+  email,
+  phone,
   dateBooked,
   illness,
 }) => {
   const date = new Date(dateBooked);
+  const [authType, setAuthType] = useState<string>("");
+
+  useEffect(() => {
+    setAuthType(sessionStorage.getItem("authType") as string);
+  }, []);
 
   return (
     <div className="consultation-card">
@@ -25,13 +31,13 @@ const ConsultationCard: FunctionComponent<ConsultationCardProps> = ({
       </div>
       <div className="consultation-card-body">
         <p>
-          <strong>Doctor:</strong> {doctorName}
+          <strong>User:</strong> {name}
         </p>
         <p>
-          <strong>Email:</strong> {doctorEmail}
+          <strong>Email:</strong> {email}
         </p>
         <p>
-          <strong>Phone:</strong> {doctorPhone}
+          <strong>Phone:</strong> {phone}
         </p>
         <p>
           <strong>Date Booked:</strong>{" "}
@@ -40,6 +46,9 @@ const ConsultationCard: FunctionComponent<ConsultationCardProps> = ({
         <p>
           <strong>Illness:</strong> {illness}
         </p>
+        <div className="consultation-button">
+          {authType == "doctor" && <Button value="View" />}
+        </div>
       </div>
     </div>
   );

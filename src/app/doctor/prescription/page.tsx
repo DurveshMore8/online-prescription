@@ -2,14 +2,12 @@
 
 import { FunctionComponent, useEffect, useState } from "react";
 import "./page.css";
-import ConsultationCard from "@/components/cards/consultation-card";
 import { fetchService } from "@/services/fetch_services";
+import ConsultationCard from "@/components/cards/consultation-card";
 
-interface PatientDoctorConsultationsProps {}
+interface DoctorPrescriptionProps {}
 
-const PatientDoctorConsultations: FunctionComponent<
-  PatientDoctorConsultationsProps
-> = () => {
+const DoctorPrescription: FunctionComponent<DoctorPrescriptionProps> = () => {
   const [consultations, setConsultations] = useState<{ [key: string]: any }[]>(
     []
   );
@@ -17,7 +15,7 @@ const PatientDoctorConsultations: FunctionComponent<
   const fetchConsultations = async () => {
     const res = await fetchService({
       method: "GET",
-      endpoint: `/consultation/patient`,
+      endpoint: `/consultation/doctor`,
     });
 
     if (res.code == 200) {
@@ -32,15 +30,15 @@ const PatientDoctorConsultations: FunctionComponent<
   }, []);
 
   return (
-    <main className="consultations">
-      <section className="consultations-grid">
+    <main className="prescription">
+      <section className="prescription-grid">
         {consultations.map((data, index) => {
           return (
             <ConsultationCard
               key={index}
-              name={data.doctorName}
-              email={data.doctorEmail}
-              phone={data.doctorPhone}
+              name={data.patientName}
+              email={data.patientEmail}
+              phone={data.patientPhone}
               dateBooked={data.dateBooked}
               illness={data.illness}
             />
@@ -51,4 +49,4 @@ const PatientDoctorConsultations: FunctionComponent<
   );
 };
 
-export default PatientDoctorConsultations;
+export default DoctorPrescription;

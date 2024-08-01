@@ -29,3 +29,11 @@
 .consultation-card-body strong {
   font-weight: bold;
 }
+
+.consultation-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
