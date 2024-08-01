@@ -38,6 +38,7 @@ const PatientDoctorConsultations: FunctionComponent<
           return (
             <ConsultationCard
               key={index}
+              id={data._id}
               name={data.doctorName}
               email={data.doctorEmail}
               phone={data.doctorPhone}

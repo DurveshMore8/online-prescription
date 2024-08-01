@@ -4,7 +4,7 @@ import Button from "@/components/button";
 import Link from "next/link";
 
 interface ConsultationCardProps {
-  id?: string;
+  id: string;
   name: string;
   email: string;
   phone: string;
@@ -50,10 +50,14 @@ const ConsultationCard: FunctionComponent<ConsultationCardProps> = ({
           <strong>Illness:</strong> {illness}
         </p>
         <Link
-          href={`/doctor/prescription/${id}`}
+          href={
+            authType == "doctor"
+              ? `/doctor/prescription/${id}`
+              : `/patient/consultations/${id}`
+          }
           className="consultation-button"
         >
-          {authType == "doctor" && <Button value="View" />}
+          <Button value="View" />
         </Link>
       </div>
     </div>

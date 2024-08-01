@@ -10,6 +10,7 @@ interface TextareaProps {
   placeholder: string;
   rows?: number;
   onChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void;
+  isReadOnly?: boolean;
 }
 
 const Textarea: FunctionComponent<TextareaProps> = ({
@@ -18,6 +19,7 @@ const Textarea: FunctionComponent<TextareaProps> = ({
   placeholder,
   rows = 4,
   onChange,
+  isReadOnly = false,
 }) => {
   return (
     <div className="textarea">
@@ -28,6 +30,7 @@ const Textarea: FunctionComponent<TextareaProps> = ({
         placeholder={placeholder}
         value={value}
         rows={rows}
+        readOnly={isReadOnly}
       />
     </div>
   );
