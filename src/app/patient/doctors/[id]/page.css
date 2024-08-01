@@ -1,0 +1,102 @@
+.consult {
+  padding: 20px;
+  padding: 32px 96px;
+  background-color: #f9f9f9;
+}
+
+.doctor-info {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-name {
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+}
+
+.specialty,
+.email,
+.phone {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #555;
+}
+
+.email a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.email a:hover {
+  text-decoration: underline;
+}
+
+.form-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 24px;
+}
+
+.form-step {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-step-head {
+  margin-bottom: 14px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group-label-value {
+  font-weight: normal;
+}
+
+.form-group-input {
+  width: 696px;
+  padding: 8px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.form-group-input:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-buttons .form-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+}
+
+.form-buttons .form-button:hover {
+  opacity: 0.9;
+}

@@ -1,6 +1,7 @@
 import { FunctionComponent } from "react";
 import "./style.css";
 import Image from "next/image";
+import Link from "next/link";
 
 interface DoctorCardProps {
   id: string;
@@ -23,7 +24,9 @@ const DoctorCard: FunctionComponent<DoctorCardProps> = ({
       <div className="card-content">
         <h2 className="doctor-name">{name}</h2>
         <p className="specialty">{speciality}</p>
-        <button className="consult-button">Consult</button>
+        <Link href={`/patient/doctors/${id}`}>
+          <button className="consult-button">Consult</button>
+        </Link>
       </div>
     </div>
   );

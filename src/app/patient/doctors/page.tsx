@@ -35,7 +35,7 @@ const PatientHome: FunctionComponent<PatientHomeProps> = () => {
           return (
             <DoctorCard
               key={index}
-              id={doctor.id}
+              id={doctor._id}
               image={doctor.profileImage}
               name={doctor.name}
               speciality={doctor.speciality}
