@@ -1,13 +1,13 @@
 # Online Prescription FE (ReactJs and NextJs)
 
 ## Credentials
-1. Doctor
-   Email: johndoe@example.com
-   Password: johndoe
+### Doctor
+1. Email: johndoe@example.com
+2. Password: johndoe
 
-2. Patient
-   Email: alicejohnson@example.com
-   Password: alicejohnson
+### Patient
+1. Email: alicejohnson@example.com
+2. Password: alicejohnson
 
 ## Server URL
 The server for this project is deployed on https://online-prescription-be.vercel.app
