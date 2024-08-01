@@ -41,7 +41,8 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
   ];
 
   return (
-    pathname.split("/")[1] !== "login" && (
+    pathname.split("/")[1] !== "login" &&
+    pathname.split("/")[2] !== "signup" && (
       <nav className="navbar">
         <h2 className="navbar-head">Prescriptioner</h2>
         <ul className="navbar-list">

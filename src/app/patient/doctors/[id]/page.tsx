@@ -153,7 +153,7 @@ const PatientDoctorConsult: FunctionComponent<
                 className="form-group-input"
                 id="surgeryTime"
                 type="date"
-                value="Surgery Time"
+                value={additionalData.surgeryTime}
                 onChange={handleChange}
               />
             </div>

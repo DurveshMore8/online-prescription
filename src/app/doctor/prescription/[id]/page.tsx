@@ -1,12 +1,22 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
-import { ChangeEvent, FunctionComponent, useEffect, useState } from "react";
+import {
+  ChangeEvent,
+  FunctionComponent,
+  SetStateAction,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import "./page.css";
 import { useParams } from "next/navigation";
 import { fetchService } from "@/services/fetch_services";
 import Textarea from "@/components/textarea";
 import Button from "@/components/button";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
+import PdfCard from "@/components/popups/pdf-card";
 
 interface DoctorPrescriptionViewProps {}
 
@@ -14,6 +24,7 @@ const DoctorPrescriptionView: FunctionComponent<
   DoctorPrescriptionViewProps
 > = () => {
   const id = useParams().id;
+  const [viewPdf, setViewPdf] = useState<boolean>(false);
   const [consultation, setConsultation] = useState<{ [key: string]: any }>({});
   const [doctorView, setDoctorView] = useState<{ [key: string]: any }>({
     careTaken: "",
@@ -113,8 +124,16 @@ const DoctorPrescriptionView: FunctionComponent<
             onChange={handleChange}
           />
         </div>
-        <Button onClick={handleUpdateClick} type="button" value="Update" />
+        <div className="form-buttons">
+          <Button onClick={handleUpdateClick} type="button" value="Update" />
+          <Button onClick={() => setViewPdf(true)} type="button" value="View" />
+        </div>
       </section>
+      <PdfCard
+        consultation={consultation}
+        view={viewPdf}
+        setView={setViewPdf}
+      />
     </main>
   );
 };

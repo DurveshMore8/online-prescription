@@ -1,6 +1,12 @@
 "use client";
 
-import { ChangeEvent, FormEvent, FunctionComponent, useState } from "react";
+import {
+  ChangeEvent,
+  FormEvent,
+  FunctionComponent,
+  useEffect,
+  useState,
+} from "react";
 import "./page.css";
 import Image from "next/image";
 import Textfield from "@/components/textfield";
@@ -54,6 +60,10 @@ const Login: FunctionComponent<LoginProps> = () => {
       alert(res.data.message);
     }
   };
+
+  useEffect(() => {
+    sessionStorage.clear();
+  }, []);
 
   return (
     <main className="login">
