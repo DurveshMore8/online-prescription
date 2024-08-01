@@ -1,0 +1,9 @@
+.consultations {
+  padding: 32px 96px;
+}
+
+.consultations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
