@@ -106,7 +106,8 @@ const PatientSignup: FunctionComponent<PatientSignupProps> = () => {
       });
 
       if (res2.code == 200) {
-        console.log(res2.data.authToken);
+        sessionStorage.setItem("authToken", res2.data.authToken);
+        sessionStorage.setItem("authType", res2.data.type);
         router.push("/patient/doctors");
       } else {
         alert(res2.data.message);
